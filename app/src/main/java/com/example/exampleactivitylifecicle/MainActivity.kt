@@ -13,6 +13,9 @@ class MainActivity : AppCompatActivity() {
         println("this in the onCreated")
         val b = findViewById<Button>(R.id.button)
         b.setOnClickListener { showImage() }
+
+        //show files dir
+        showFilesDir()
         Log.d("TAGLIFECYVLE","THIS IS THE ONCREATED")
     }
 
@@ -44,5 +47,11 @@ class MainActivity : AppCompatActivity() {
     fun showImage(){
         val iv = findViewById<ImageView>(R.id.imageView)
         iv.setImageResource(R.drawable.bayern)
+    }
+
+    fun showFilesDir(){
+        Log.d("TAGFILES","Absolute path ${filesDir.absolutePath}")
+        Log.d("TAGFILES","is a directory ${filesDir.isDirectory}")
+
     }
 }
